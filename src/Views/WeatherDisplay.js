@@ -1,13 +1,25 @@
 import React from 'react';
+import './WeatherDisplay.css';
 
 const WeatherDisplay = ({ data }) => {
   return (
-    <div>
-      <h2>Weather in {data.location.name}</h2>
-      <p><strong>Temperature:</strong> {data.current.temp_c} °C</p>
-      <p><strong>Humidity:</strong> {data.current.humidity} %</p>
-      <p><strong>Wind Speed:</strong> {data.current.wind_kph} kph</p>
-      <p><strong>UV Index:</strong> {data.current.uv}</p>
+    <div className="weather-container">
+      <div className="weather-card">
+        <h3>Temperature</h3>
+        <p>{data.current.temp_c} °C</p>
+      </div>
+      <div className="weather-card">
+        <h3>Humidity</h3>
+        <p>{data.current.humidity} %</p>
+      </div>
+      <div className="weather-card">
+        <h3>Wind Speed</h3>
+        <p>{data.current.wind_kph} kph</p>
+      </div>
+      <div className="weather-card">
+        <h3>UV Index</h3>
+        <p>{data.current.uv}</p>
+      </div>
     </div>
   );
 };
