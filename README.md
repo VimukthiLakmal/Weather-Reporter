@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# 🌤️ Simple Weather Reporter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React application to fetch and display real-time weather information using the WeatherAPI service. Built using the **MVC architectural pattern**, this app allows users to search for any city and view key weather parameters like temperature, humidity, wind speed, and UV index.
 
-## Available Scripts
+## 🔧 Tech Stack
 
-In the project directory, you can run:
+- ⚛️ React (via Create React App)
+- 📁 MVC folder architecture
+- 🌐 WeatherAPI for real-time data
+- 🎨 CSS-in-JS for styling
+- 🚀 Deployed on Netlify
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📁 Project Structure (MVC)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+src/
+│
+├── models/         # API logic (fetches weather data)
+├── views/          # UI Components (WeatherDisplay, SearchBar, etc.)
+├── controllers/    # Data handlers between model and view
+├── App.js          # Main component integrating everything
+├── index.js        # Entry point
+```
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧪 Features
 
-### `npm run build`
+- 🔍 City-based weather search
+- 🌦️ Displays temperature, humidity, wind speed & UV index
+- 🖼️ Shows weather condition image (icon)
+- 🎯 Responsive card layout (2x2 grid)
+- 🧠 MVC separation for better maintainability
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔑 Environment Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Create a `.env` file in the **root** directory with the following keys:
 
-### `npm run eject`
+```env
+REACT_APP_WEATHER_API_KEY=your_weatherapi_key
+REACT_APP_WEATHER_API_URL=https://api.weatherapi.com/v1/current.json
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> ✅ Note: Don’t commit `.env` to GitHub. It is already ignored via `.gitignore`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ▶️ Local Development
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/your-username/weather-reporter.git
+   cd weather-reporter
+   ```
 
-## Learn More
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🌍 Deploying to Netlify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Push your code to GitHub.
+2. Go to [https://www.netlify.com](https://www.netlify.com) and sign in.
+3. Click **"Add new site" > "Import from GitHub"**.
+4. Select your repository.
+5. Under **Build Settings**:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `build`
+6. Under **Environment variables**, add:
+   - `REACT_APP_WEATHER_API_KEY`
+   - `REACT_APP_WEATHER_API_URL`
+7. Click **Deploy Site**
 
-### Analyzing the Bundle Size
+> ✅ After deployment, Netlify will give you a public URL.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🔗 Submit
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Live URL** from Netlify
+- **GitHub Repository**
+- Optional: Short description or demo GIF
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📜 License
 
-### Deployment
+This project is open-source and available under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 👨‍💻 Developed By
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Vimukthi Lakmal – 2025
