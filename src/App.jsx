@@ -12,24 +12,26 @@ function App() {
 
   useEffect(() => {
     getWeatherData(setWeather, setError, setLoading, city);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [city]);
 
   useEffect(() => {
-    inputRef.current?.focus(); // ✅ Auto-focus the search input on load
+    inputRef.current?.focus(); // Auto-focus the search input on load
   }, []);
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (inputCity.trim() !== '') {
-      setCity(inputCity);
+      setCity(inputCity.trim());
     }
   };
 
   useEffect(() => {
-    // ✅ Clear error after successful fetch
+    // Clear error after successful fetch
     if (weather && error) {
       setError('');
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [weather]);
 
   return (
@@ -37,7 +39,8 @@ function App() {
       style={{
         padding: '40px 20px',
         minHeight: '100vh',
-        backgroundImage: 'url(https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80)',
+        backgroundImage:
+          'url(https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: '#1a237e',
@@ -85,14 +88,14 @@ function App() {
         </button>
       </form>
 
-      {/* ✅ Loading Spinner */}
+      {/* Loading Spinner */}
       {loading && (
         <div style={{ margin: '20px', fontSize: '1.2rem' }}>
           <span className="loader"></span> Loading...
         </div>
       )}
 
-      {/* ✅ User-friendly Error Message */}
+      {/* User-friendly Error Message */}
       {error && (
         <p style={{ color: 'red', fontWeight: 'bold' }}>
           {error === 'Failed to fetch weather data'
@@ -101,7 +104,7 @@ function App() {
         </p>
       )}
 
-      {/* ✅ Show Last Searched City and Country as Header */}
+      {/* Show Last Searched City and Country as Header */}
       {weather && !loading && (
         <>
           <h2 style={{ marginBottom: '20px' }}>
