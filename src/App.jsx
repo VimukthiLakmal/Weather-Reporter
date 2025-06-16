@@ -51,7 +51,7 @@ function App() {
       }}
     >
       <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>
-        Simple Weather Reporter
+        Weather Details
       </h1>
 
       <form
